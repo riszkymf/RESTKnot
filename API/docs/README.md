@@ -21,11 +21,11 @@ RESTKnot API requires you to be registered in neo portal. If you don't have an a
 ## RULES
 ------------------
 - ### Creating Domain :
-    Steps needed to create and synchronize DNS is explained [here](RULES_add_domain.md)
+    Steps needed to create and synchronize DNS is explained [here](markdown/documentation/RULES_add_domain.md)
 - ### Creating Record :
-    Steps needed to create and synchronize records is explained [here](RULES_add_record.md)
+    Steps needed to create and synchronize records is explained [here](markdown/documentation/RULES_add_record.md)
 - ### Record Data :
-    Required data for various type of records is explained [here](RULES.md)
+    Required data for various type of records is explained [here](markdown/documentation/RULES.md)
 
 ## Others:
 - Postman API Documentation : [link](postman/REST_KNOT_COCKROACH.json)
