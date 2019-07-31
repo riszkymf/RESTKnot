@@ -1,25 +1,24 @@
-language: python
-python:
-- '3.6'
-services:
-- postgresql
-- redis
-- docker
-- rabbitmq
-skip_cleanup: true
-jobs:
-  include:
-    - stage: unittest
-      script: bash .travis/unittest.sh
-    - stage: announce
-      script: echo Start Test/Deploy
-stages:
-- announce
-- name: unittest
-  if: branch = devel
-deploy:
-  provider: script
+  language: python
+  python:
+  - '3.6'
+  services:
+  - postgresql
+  - redis
+  - docker
   skip_cleanup: true
-  script: bash .travis/deploy.sh
-  on:
-    tags: true
+  jobs:
+    include:
+      - stage: unittest
+        script: bash .travis/unittest.sh
+      - stage: announce
+        script: echo Start Test/Deploy
+  stages:
+  - announce
+  - name: unittest
+    if: branch = testcase_travis
+  deploy:
+    provider: script
+    skip_cleanup: true
+    script: bash .travis/deploy.sh
+    on:
+      tags: true
